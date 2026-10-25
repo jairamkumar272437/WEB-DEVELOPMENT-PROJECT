@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitZone Gym</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #111;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h1 {
+            color: #ff4d00;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            color: #ff4d00;
+        }
+
+        .hero {
+            min-height: 400px;
+            background: linear-gradient(120deg, #222, #555);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero span {
+            color: #ff4d00;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff4d00;
+            color: white;
+            padding: 12px 25px;
+            margin-top: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #d83e00;
+        }
+
+        section {
+            padding: 50px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #ddd;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #ff4d00;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        .facilities {
+            background: #222;
+            color: white;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            color: #222;
+        }
+
+        th, td {
+            padding: 14px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background: #ff4d00;
+            color: white;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: left;
+            box-shadow: 0 3px 10px #ddd;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            width: 100%;
+            font-size: 16px;
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+
+            .hero h2 {
+                font-size: 30px;
+            }
+
+            section {
+                padding: 35px 5%;
+            }
+
+            table {
+                font-size: 13px;
+            }
+
+            th, td {
+                padding: 8px 4px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>FitZone</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#programs">Programs</a>
+            <a href="#trainers">Trainers</a>
+            <a href="#membership">Membership</a>
+            <a href="#contact">Join Us</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h2>BUILD YOUR <span>BEST SELF</span></h2>
+        <p>Train hard, stay strong, and achieve your fitness goals.</p>
+        <a href="#membership" class="btn">Explore Membership</a>
+    </section>
+
+    <section id="programs">
+        <h2>Our Workout Programs</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>💪 Strength Training</h3>
+                <p>Build muscle and improve your overall strength with weight training.</p>
+            </div>
+
+            <div class="card">
+                <h3>🏃 Cardio Fitness</h3>
+                <p>Improve heart health and stamina through cardio exercises.</p>
+            </div>
+
+            <div class="card">
+                <h3>🧘 Yoga & Flexibility</h3>
+                <p>Improve flexibility, balance, and relaxation.</p>
+            </div>
+
+            <div class="card">
+                <h3>🔥 Weight Loss</h3>
+                <p>Follow structured workouts to improve fitness and manage weight.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="trainers">
+        <h2>Meet Our Trainers</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Rahul Kumar</h3>
+                <p>Strength Training Coach</p>
+                <p>Experience: 5 Years</p>
+            </div>
+
+            <div class="card">
+                <h3>Priya Sharma</h3>
+                <p>Yoga Instructor</p>
+                <p>Experience: 4 Years</p>
+            </div>
+
+            <div class="card">
+                <h3>Arjun Reddy</h3>
+                <p>Fitness and Cardio Coach</p>
+                <p>Experience: 6 Years</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="facilities" id="facilities">
+        <h2>Our Facilities</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Modern Equipment</h3>
+                <p>Quality gym equipment for effective workouts.</p>
+            </div>
+
+            <div class="card">
+                <h3>Personal Training</h3>
+                <p>Guidance to help you achieve your fitness goals.</p>
+            </div>
+
+            <div class="card">
+                <h3>Changing Rooms</h3>
+                <p>Comfortable changing facilities for members.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule">
+        <h2>Weekly Class Schedule</h2>
+        <table>
+            <tr>
+                <th>Day</th>
+                <th>Class</th>
+                <th>Time</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>Strength Training</td>
+                <td>6:00 AM</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>Cardio Fitness</td>
+                <td>7:00 AM</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>Yoga</td>
+                <td>8:00 AM</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>Weight Training</td>
+                <td>6:00 PM</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>Full Body Workout</td>
+                <td>7:00 AM</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="membership">
+        <h2>Membership Plans</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Basic Plan</h3>
+                <p class="price">₹999</p>
+                <p>Per Month</p>
+                <p>Gym access</p>
+                <p>Basic equipment</p>
+                <a href="#contact" class="btn">Choose Plan</a>
+            </div>
+
+            <div class="card">
+                <h3>Standard Plan</h3>
+                <p class="price">₹1,999</p>
+                <p>Per Month</p>
+                <p>Gym access</p>
+                <p>Group classes</p>
+                <a href="#contact" class="btn">Choose Plan</a>
+            </div>
+
+            <div class="card">
+                <h3>Premium Plan</h3>
+                <p class="price">₹2,999</p>
+                <p>Per Month</p>
+                <p>All gym facilities</p>
+                <p>Personal training</p>
+                <a href="#contact" class="btn">Choose Plan</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Join FitZone Today</h2>
+        <form action="#" method="post">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name"
+                   placeholder="Enter your name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="Enter your phone number" required>
+
+            <label for="plan">Select Membership:</label>
+            <select id="plan" name="plan" required>
+                <option value="">Choose a plan</option>
+                <option value="basic">Basic Plan</option>
+                <option value="standard">Standard Plan</option>
+                <option value="premium">Premium Plan</option>
+            </select>
+
+            <label for="message">Fitness Goals:</label>
+            <textarea id="message" name="message" rows="4"
+                      placeholder="Tell us your fitness goals"></textarea>
+
+            <button type="submit" class="btn">Register Now</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 FitZone Gym. All Rights Reserved.</p>
+        <p>Email: fitzone@example.com | Phone: 9876543210</p>
+    </footer>
+
+</body>
+</html>
